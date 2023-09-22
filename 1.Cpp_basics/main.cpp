@@ -10,11 +10,19 @@
 // char
 // if-else
 // switch-case
+// arrays
+// strings
+// functions
+// Pass by value --> Copy goes
+// array --> always with reference
 
 #include <iostream>
 #include <string>
 // #include <bits/stdc++.h> ---> //include all the possible libraries
 using namespace std;
+void printName(string name){
+    cout<<"Hey "<<name<<endl;
+}
 int main(int argc, const char * argv[]) {
                        //DATATYPESSSSSSSS
     cout << "Nmaste, World!"<<endl;  //print
@@ -32,6 +40,7 @@ int main(int argc, const char * argv[]) {
     cout<<b<<endl;
     //string and getline()
     string str;
+    cout<<"String:";
   //  cin>>str; //upto space only
     getline(cin,str);
     cout<<str<<endl;
@@ -81,6 +90,30 @@ int main(int argc, const char * argv[]) {
         default:
             cout<<"INvalid"<<endl;
     }
+                  //ARRAYSSSSSS ------> similar data type
+    int arr[5] = {2,4,5,7,9};
+//    cin>>arr[0]>>arr[1]>>arr[2]>>arr[3]>>arr[4];
+    arr[3] += 10;
+    cout<<arr[3]<<endl;
+    int darr[3][5];
+    darr[1][3] = 11;
+    cout<<darr[1][3]<<endl;
+    cout<<darr[1][2]<<endl;
+                   //STRINGSSSS
+    string s = "striver";
+    int len = s.size();
+    cout<<s[len -1]<<endl;
+    s[len -1] = 'f';
+    cout<<s<<endl;
+                   //FOR LOOP
+    for(int i = 1 ; i <= 10 ; i++){
+        cout<<"Mann0230 "<<i<<endl;
+    }
+    // Functions
+    // void return parameterised non parameterised
+    string Name;
+   cin>>Name;
+    printName(Name);
     return 0;
 }
  
